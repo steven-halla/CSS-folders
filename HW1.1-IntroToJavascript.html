@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lab 1-1</title>
+</head>
+<body>
+<h3>Steven Halla</h3>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+<br>
+
+<div id="browserInfo"></div>
+
+
+
+<script type="text/javascript">
+    const x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+
+
+
+    var browserInfo = 'navigator.appName: ' + navigator.appName + '<br><br>' +
+        'navigator.appVersion: ' + navigator.appVersion + '<br><br>' +
+        'navigator.appCodeName: ' + navigator.appCodeName + '<br><br>' +
+        'navigator.cookieEnabled: ' + navigator.cookieEnabled + '<br><br>' +
+        'navigator.language: ' + navigator.language + '<br><br>' +
+        'navigator.onLine: ' + navigator.onLine + '<br><br>' +
+        'navigator.platform: ' + navigator.platform + '<br><br>' +
+        'navigator.product: ' + navigator.product + '<br><br>' +
+        'navigator.userAgent: ' + navigator.userAgent + '<br><br>' +
+        'navigator.javaEnabled(): ' + navigator.javaEnabled() + '<br><br>';
+
+    document.getElementById('browserInfo').innerHTML = browserInfo;
+
+
+</script>
+
+
+</body>
+</html>
+

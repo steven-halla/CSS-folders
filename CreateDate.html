@@ -1,0 +1,33 @@
+
+
+<html>
+    <body>
+        <h1>Steven Halla</h1>
+        <h2>My First JavaScript</h2>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+            Click me to display Date and Time.
+        </button>
+        <br>
+        <br>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = new Date().getFullYear()">
+            Click me to display the Year.
+        </button>
+        <br>
+        <br>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = new Date().getMonth() + 1">
+            Click me to display the Month.
+        </button>
+        <br>
+        <br>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = new Date().getDate()">
+            Click me to display the Day.
+        </button>
+        <br>
+        <br>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = new Date().toLocaleDateString()">
+            Click me to display the Full Date.
+        </button>
+        <p id="demo"></p>
+    </body>
+</html>
+
